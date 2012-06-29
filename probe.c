@@ -6,7 +6,7 @@ int main(const int argc, char** argv){
 		printf("Please input filename.\n");
 		return -1;
 	}
-	const void* addr = LoadLibrary(argv[0]);
+	const void* addr = LoadLibrary(argv[1]);
 	if(addr == NULL){
 		const int errorcode = GetLastError();
 		printf("failed to load library: %s\n",argv[0]);
